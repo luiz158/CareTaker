@@ -9,7 +9,9 @@ import java.awt.*;
  */
 public class Start {
 
-    public static void main(String[] args) {
+
+
+    public static void main(String[] args) throws InterruptedException {
         if (!SystemTray.isSupported()) {
             System.out.println("System tray is not supported !!! ");
         } else {
@@ -17,9 +19,7 @@ public class Start {
             if (System.getProperty("os.name").equals("Mac OS X")) {
                 System.setProperty("apple.apple.macos.useScreenMenuBar", "true");
             }
-            CareTaker ct = new CareTaker();
-            ct.setVisible(true);
-
+            new CareTaker();
         }
     }
 }
